@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeAlpha Pro Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-calculator">
+        <div class="top-header">
+            <span class="status-badge">PRECISION_CORE</span>
+            <div class="window-controls">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        
+        <div class="display-area">
+            <div id="history"></div>
+            <div id="main-output">0</div>
+        </div>
+
+        <div class="keypad">
+            <button class="action-btn clear" onclick="resetCalc()">AC</button>
+            <button class="action-btn delete" onclick="popDigit()">⌫</button>
+            <button class="op-btn" onclick="setOp('÷')">÷</button>
+            <button class="op-btn" onclick="setOp('×')">×</button>
+
+            <button onclick="pushNum('7')">7</button>
+            <button onclick="pushNum('8')">8</button>
+            <button onclick="pushNum('9')">9</button>
+            <button class="op-btn" onclick="setOp('-')">-</button>
+
+            <button onclick="pushNum('4')">4</button>
+            <button onclick="pushNum('5')">5</button>
+            <button onclick="pushNum('6')">6</button>
+            <button class="op-btn" onclick="setOp('+')">+</button>
+
+            <button onclick="pushNum('1')">1</button>
+            <button onclick="pushNum('2')">2</button>
+            <button onclick="pushNum('3')">3</button>
+            <button class="equal-btn" onclick="runResult()">=</button>
+
+            <button class="span-two" onclick="pushNum('0')">0</button>
+            <button onclick="pushNum('.')">.</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
